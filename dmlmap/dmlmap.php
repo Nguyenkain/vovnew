@@ -7,6 +7,7 @@
 			<div class="row">
 				<div id="Repeater1Map">
 					<div id="map" class="container-fluid"></div>
+					<input id="pac-input" class="controls" type="text" placeholder="Search Box">
 				</div>
 			</div>
 		</div>

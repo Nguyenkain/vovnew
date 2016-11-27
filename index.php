@@ -73,5 +73,6 @@ include ABS_PATH . '/dmlmap/dmlmap.php';
 <!-- DML MAP SCRIPTS -->
 <script src="dmlmap/dmlmap.js"></script>
 <link href="dmlmap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="dmlmap/css/custom.css" rel="stylesheet" type="text/css"/>
 </body>
 </html>
