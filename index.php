@@ -14,7 +14,7 @@ if (!isset($_SESSION['logged_in']) || (isset($_SESION['logged_in']) && $_SESSION
     <!---JQUERY MUST BE REFERENCED FOR DMLMAP---->
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <!---JQUERY REFERENCE ENDS FOR DMLMAP-->
 </head>
 
@@ -69,7 +69,7 @@ include ABS_PATH . '/dmlmap/dmlmap.php';
 
 <!---BOOTSTRAP REFERENCE STARTS FOR DMLMAP-->
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"/>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!-- DML MAP SCRIPTS -->
 <script src="dmlmap/dmlmap.js"></script>
 <link href="dmlmap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
