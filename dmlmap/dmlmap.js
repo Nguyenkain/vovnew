@@ -12,7 +12,7 @@ var ClearMultiDbLines = []; //This's core. It's used both to draw and clear line
 var ClearMultiDbPolygones = []; //This's core. It's used both to draw and clear polygons
 var myLineList = []; //It's used to populate Line Control Panel
 var myPolygonList = []; //It's used to populate Polygon Control Panel
-var dmlServer = document.location.protocol + "//" + document.location.host + '/' + window.location.pathname;
+var dmlServer = document.location.protocol + "//" + document.location.host + (window.location.pathname != "/" ? '/' + window.location.pathname : "");
 
 $(document).ready(function () {
 	var myLocation = $(location).attr('href');
