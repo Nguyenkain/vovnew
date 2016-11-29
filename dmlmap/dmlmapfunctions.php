@@ -192,7 +192,7 @@
 		$field1 = DEFAULT_LAT;
 		$field2 = DEFAULT_LONG;
 		$field3 = $api;
-		$field4 = "650";	
+		$field4 = "800";
 		$field5 = "1";
 		$field8 = DEFAULT_ZOOM;
 		$sql = "INSERT INTO tbldmlmapcontent (CntUsrCtrlID, CntLink, CntField1, CntField2, CntField3, CntField4, CntField5, CntField8)
