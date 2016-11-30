@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 //****GET DATA AJAX START
 function CallHandler(myLocation) {
-	var mySaveString = dmlServer + "/dmlmap/dmlmapfunctions.php?SaveType=start&url=" + myLocation + "&CntID=1";
+	var mySaveString = dmlServer + "/dmlmap/dmlmapfunctions.php?SaveType=start&url=" + encodeURIComponent(myLocation) + "&CntID=1";
 	var savecenter = {};
 	savecenter.url = mySaveString;
 	savecenter.type = "POST";
@@ -621,7 +621,7 @@ function CreateNewMarker(myLat, myLng, myShapeID, myMarkerType) {
 		//Adds marker icon
 		myiconUrl = "0";
 		myCornerType = ".";
-		myString = dmlServer + "/dmlmap/dmlmapfunctions.php?SaveType=ins&CntID=1&p2=" + myUrl + "&p3=" + myLat + "&p4=" + myLng + "&p5=Place Name&p6=Place Description&p7=" + myCornerType + "&p8=" + myiconUrl + "&p9=.&p10=.&p11=.";
+		myString = dmlServer + "/dmlmap/dmlmapfunctions.php?SaveType=ins&CntID=1&p2=" + encodeURIComponent(myUrl) + "&p3=" + myLat + "&p4=" + myLng + "&p5=Place Name&p6=Place Description&p7=" + myCornerType + "&p8=" + myiconUrl + "&p9=.&p10=.&p11=.";
 	} else if (myMarkerType == 2) {
 		var myNewLat;
 		var myNewLng;
@@ -660,10 +660,10 @@ function CreateNewShape(myLat, myLng, myMarkerType) {
 	var myString;
 	if (myMarkerType == 1) {
 		//Creates new line
-		myString = dmlServer + "/dmlmap/dmlmapfunctions.php?SaveType=ins&CntID=1&p2=" + myUrl + "&p3=" + myLat + "&p4=" + myLng + "&p5=.&p6=.&p7=L&p8=L&p9=.&p10=.&p11=hashtagFE2E2E";
+		myString = dmlServer + "/dmlmap/dmlmapfunctions.php?SaveType=ins&CntID=1&p2=" + encodeURIComponent(myUrl) + "&p3=" + myLat + "&p4=" + myLng + "&p5=.&p6=.&p7=L&p8=L&p9=.&p10=.&p11=hashtagFE2E2E";
 	} else if (myMarkerType == 2) {
 		//Creates new polygon
-		myString = dmlServer + "/dmlmap/dmlmapfunctions.php?SaveType=ins&CntID=1&p2=" + myUrl + "&p3=" + myLat + "&p4=" + myLng + "&p5=Polygon description&p6=.&p7=P&p8=P&p9=hashtag2E2EFE&p10=.&p11=hashtagFE2E2E";
+		myString = dmlServer + "/dmlmap/dmlmapfunctions.php?SaveType=ins&CntID=1&p2=" + encodeURIComponent(myUrl) + "&p3=" + myLat + "&p4=" + myLng + "&p5=Polygon description&p6=.&p7=P&p8=P&p9=hashtag2E2EFE&p10=.&p11=hashtagFE2E2E";
 	}
 
 	//2) Calls AJAX method to update database
@@ -819,7 +819,7 @@ function ResetControl() {
 		// Resets the control by deleting all data from database
 		myDecisionText = "Do you want to reset control?";
 		var myUrl = $(location).attr('href');
-		myResetStr = dmlServer + "/dmlmap/dmlmapfunctions.php?SaveType=res&CntUsrCtrlID=1&url=" + myUrl + " ";
+		myResetStr = dmlServer + "/dmlmap/dmlmapfunctions.php?SaveType=res&CntUsrCtrlID=1&url=" + encodeURIComponent(myUrl) + " ";
 	} else if (myButtonText == "Xóa đường") {
 		// Deletes one record from the database based on the ID number
 		var myLineID = $("#dmlLineSettingsIdValue").text();
@@ -843,7 +843,7 @@ function dmlCreateMap() {
 	var myApi = $("#dmlTxtApiKey").val();
 	var myUrl = $(location).attr('href');
 	var choice = {};
-	choice.url = dmlServer + "/dmlmap/dmlmapfunctions.php?SaveType=cmap&api=" + myApi + "&url=" + myUrl;
+	choice.url = dmlServer + "/dmlmap/dmlmapfunctions.php?SaveType=cmap&api=" + myApi + "&url=" + encodeURIComponent(myUrl);
 	choice.type = "POST";
 	choice.data = {};
 	choice.processData = false;
